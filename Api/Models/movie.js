@@ -13,7 +13,7 @@ const movieSchema = mongoose.Schema({
     },
   ],
   homepage: String,
-  id: Number,
+  id: {type: Number, unique: true },
   imdb_id: String,
   original_language: String,
   original_title: String,
@@ -49,8 +49,9 @@ const movieSchema = mongoose.Schema({
   video: Boolean,
   vote_average: Number,
   vote_count: Number,
+  rank:{ type: Number, min: 18, max: 65 }
 });
 
-productSchema.plugin(timestamps);
+movieSchema.plugin(timestamps);
 
 module.exports = mongoose.model("movie", movieSchema);
