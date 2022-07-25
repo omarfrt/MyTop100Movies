@@ -4,8 +4,8 @@ const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 const jwt = require("jsonwebtoken");
 
-const User = require('./../../Models/user');
-const checkAuth = require('./../../middelware/passport');
+const User = require('../../Models/user');
+const checkAuth = require('../../middelware/passport');
 // leaving pwdjwt here for now
 const pwdjwt= '3ezi3endo2dh';
 

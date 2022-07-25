@@ -6,13 +6,13 @@ const mongoose = require("mongoose");
 const passport = require("passport");
 
 const checkAuth = require('./Api/middelware/passport');
-const userRoutes = require("./Api/Routes/User/user");
+const userRoutes = require("./Api/Routes/User/User");
 const PostmovieRoutes = require("./Api/Routes/Movie/Post");
 const GetmovieRoutes = require("./Api/Routes/Movie/Get");
 const DeletemovieRoutes= require("./Api/Routes/Movie/Delete");
-const ListAddMovieRoutes = require("./Api/Routes/List/add-movie");
-const ListDeleteMovieRoutes= require("./Api/Routes/List/remove-movie");
-const  ListGetMyTop100MoviesRoutes = require("./Api/Routes/List/getMyTop100Movies");
+const ListAddMovieRoutes = require("./Api/Routes/List/AddMovie");
+const ListDeleteMovieRoutes= require("./Api/Routes/List/RemoveMovie");
+const  ListGetMyTop100MoviesRoutes = require("./Api/Routes/List/GetMyTop100Movies");
 //leaving everything here to make coding faster
 const pwddb = "qwert12345A";
 mongoose.connect(

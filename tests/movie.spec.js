@@ -25,7 +25,7 @@ describe('Movie routes',()=>{
     // Post movie
 
     describe("POST  /movie",()=>{
-        it("it should not let the movie the mask get saved as its a duplicate",(done)=>{
+        it("it should NOT let the movie the mask get saved as its a duplicate",(done)=>{
             const MovieName={
                 movieName:'the mask'
             }
@@ -39,7 +39,7 @@ describe('Movie routes',()=>{
         }) 
      });
      describe("POST  /movie",()=>{
-        it("it should not let the movie get saved with no movieName",(done)=>{
+        it("it should NOT let the movie get saved with no movieName",(done)=>{
             const MovieName={
                 movieName:''
             }
@@ -54,7 +54,7 @@ describe('Movie routes',()=>{
      });
     //Delete movie
     describe("Delete  /movie",()=>{
-        it("it should not let the movie get Delted with no _id ",(done)=>{
+        it("it should NOT let the movie get Delted with no _id ",(done)=>{
             const _id={
                 _id:''
             }

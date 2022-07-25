@@ -10,7 +10,7 @@ chai.use(chaiHttp);
 describe('MyTop100Movies List Routes',()=>{
     //add-movie POST
     describe("POST  /MyTop100Movie",()=>{
-        it("it should not let let user add movie to list without authentication",(done)=>{
+        it("it should Not let let user add movie to list without authentication",(done)=>{
             const MovieName={
                 movieName:'the mask',
                 rank:5
@@ -26,7 +26,7 @@ describe('MyTop100Movies List Routes',()=>{
      });
     //getMyTop100Movies GET
     describe("GET  /MyTop100Movie",()=>{
-        it("it should not let let user get movie to list without authentication",(done)=>{
+        it("it should NOT let let user get movie to list without authentication",(done)=>{
          chai.request(app)
              .get("/MyTop100Movie")
              .end((err,response)=>{
@@ -37,7 +37,7 @@ describe('MyTop100Movies List Routes',()=>{
      });
     //remove-movie DELETE
     describe("Delete  /MyTop100Movie",()=>{
-        it("it should not let let user Delete movie from list without authentication ",(done)=>{
+        it("it should NOT let let user Delete movie from list without authentication ",(done)=>{
             const _id={
                 _id:'213548'
             }
