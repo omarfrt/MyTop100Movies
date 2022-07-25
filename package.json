@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "test": "mocha ./tests/*.spec.js"
+  },
   "dependencies": {
     "axios": "^0.27.2",
     "bcrypt": "^5.0.1",
@@ -9,5 +12,10 @@
     "mongoose-timestamp": "^0.6.0",
     "nodemon": "^2.0.19",
     "passport": "^0.6.0"
+  },
+  "devDependencies": {
+    "chai": "^4.3.6",
+    "chai-http": "^4.3.0",
+    "mocha": "^10.0.0"
   }
 }

@@ -3,6 +3,7 @@ const router = express.Router();
 const axios = require("axios");
 const Movie = require('../../Models/movie');
 const { default: mongoose } = require("mongoose");
+const { deleteOne } = require("../../Models/movie");
 
 
 
@@ -14,6 +15,11 @@ router.post("/", async (req, res, next) => {
       api_key: "a2bf4d20efeb5bd42b43106545181c00",
       query: movieName,
     },
+  },
+  ).catch((err) => {
+    res.status(500).json({
+      error: err,
+    })
   });
   const SearchResult = movies.data.results[0];
   const movie = new Movie({
@@ -42,19 +48,17 @@ router.post("/", async (req, res, next) => {
   });
   movie.save()
   .then((result) => {
-    console.log(result);
     res.status(201).json({
       message: "movie created",
-      createdprudct: result,
+      createdMovie: result,
     });
   })
   .catch((err) => {
-    console.log(err);
     res.status(500).json({
       error: err,
     });
   });
-
+  
 
 });
 
