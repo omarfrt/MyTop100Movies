@@ -14,14 +14,8 @@ const ListAddMovieRoutes = require("./Api/Routes/List/AddMovie");
 const ListDeleteMovieRoutes= require("./Api/Routes/List/RemoveMovie");
 const  ListGetMyTop100MoviesRoutes = require("./Api/Routes/List/GetMyTop100Movies");
 //leaving everything here to make coding faster
-const pwddb = "qwert12345A";
 mongoose.connect(
-  "mongodb+srv://jlo:" +
-    pwddb +
-    "@node-rest-shop-ijnnd.mongodb.net/test?retryWrites=true&w=majority",
-  {
-    useNewUrlParser: true,
-  }
+  //mongodb address
 );
 
 app.use(
